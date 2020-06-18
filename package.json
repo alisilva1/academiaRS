@@ -1,0 +1,20 @@
+{
+  "name": "academia01",
+  "version": "1.0.0",
+  "description": "Testando sem o Y",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "node server.js",
+    "start": "nodemon server.js"
+  },
+  "author": "Alisson - alisilva1@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
