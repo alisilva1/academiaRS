@@ -1,212 +1,38 @@
-@import "https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Spicy+Rice&display=swap";
-
-:root{
-    --color-yellow: #f3e13f;
-}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 *{
+    /* é criado uma borda automática na pagina, para não ter borda precisa ajustar dessa forma */
     margin: 0;
     padding: 0;
-    border: 0;
+    border: none;
 }
 
-body{
-    background: #262c4d; 
-    font-family: 'Spicy Rice', cursive;
+body {
+    font-family: 'Merriweather', serif;
+    /* Cores de fundo foco para blue navi sendo interessante.  #293484 /  #000080 */
+    background-color: #293484;
 }
 
 header{
-    padding: 32px;
-    border-bottom: 1px solid #333;
-    background: rgb(255, 255, 255);
+    /* Tons de amarelo #fcffa4 / #ff6*/
+    background-color: #fcffa4;
+    /* Com essa configuração o box sizing consegue centralizar o texto, somente com padding não fica centralizado */
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .links{
-    text-align:center;
+    font-size: 22px;
 }
 
-.links a{
-    color: silver;
-    font-size: 20px ;
-    line-height: 28px;
-    margin: 0 16px;
-    padding-bottom: 3px;
+.links a + a {
+    margin-left: 32px ;
+
+}
+
+.links a {
+    /* Retirada underline */
     text-decoration: none;
-}
-
-.links a:hover{
-    color: tomato;
-    transition: color   200ms;
-}
-
-#wrapper {
-    text-align: center;
-    padding: 32px;
-
-}
-
-#wrapper img {
-    width: 250px;
-    border-radius: 50%;
-    border: 10px solid green;
-    margin-bottom: 32px;
-}
-
-#wrapper h1{
-    font-size: 26px;
-    line-height: 52px;
-    font-weight: 400;
-    margin-top: 8px;
-    color:var(--color-yellow);
-}
-
-#wrapper h2{
-    font-size: 26px;
-    line-height: 34px;
-    font-weight: normal;
-    opacity: 0.8;
-    color:var(--color-yellow);
-}
-
-#wrapper p{
-    max-width: 500px;
-    margin: 32px auto;
-    font-size: 24px;
-    line-height: 34px;
-    color: var(--color-yellow)
-}
-
-#wrapper h2 a{
-    color: var(--color-yellow)
-}
-
-#links-footer a{
-    border-bottom: 1px solid var(--color-yellow);
-}
-
-
-/*=== CARDS ===*/ 
-.cards{
-    max-width: 1000px;
-    margin: 0 auto;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-
-}
-
-.card{
-    background-color: #7159C1;
-    display: grid;
-    cursor: pointer;
-}
-
-.card__image-container img{
-    width: 100%;
-}
-
-.card_content,
-.card_info{
-    padding: 15px;
-
-}
-
-.card_info{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: rgb(255, 255, 255);
-    filter: brightness(90%);
-    padding: 0px 0px;
-    border-radius: 30px;
-    text-align: center;
-}
-
-.nome{
-    background-color: yellow;
-    border-radius: 20px;
-    text-align: Center;
-}
-
-/*=== MODAL ===*/
-.modal-overlay{
-    background-color: rgba(0, 0, 0, 0.7);
-    width:  100%;
-    height: 100%;
-    position: fixed;
-    top: 0px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.modal{ 
-    background-color: white;
-    width: 90%;
-    height: 90%;
-    margin: 5vh auto;
-    position: relative;
-
-}
-
-.modal .close-modal{
-    color:  black;
-    position:   absolute;
-    right: 15px;
-    top: 15px;
-    cursor: pointer;
-}
-
-/*=== MODAL.ACTIVE ===*/
-
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
-}
-
-
-iframe{
-    width: 85%;
-    height: 80%;
-    position: absolute;
-    top: 80px;
-    right: 120px;
-}
-
-/* === FEATURED === */
-.featured-wrapper.card__image-container{
-    position: relative;
-}
-.featured {
-    background: #fff6fb;
-    padding: 6px 10px;
-    color: black;
-    position: absolute;
-    right: 5px;
-    border-radius: 23px;
-    top: 249px;
-}
-
-
-/* ===VIDEOPAGE=== */
-.video{
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.video .card{
-    cursor: initial;
-}
-
-.card__video-container{
-    position: relative;
-    width: 100%;
-    padding-top: 55.5%;
-    left: 120px;
-    
-}
-.card__video-container iframe{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    
 }
