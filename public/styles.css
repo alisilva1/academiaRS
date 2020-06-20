@@ -22,13 +22,15 @@ header{
     background-color: #fcffa4;
     /* Com essa configuração o box sizing consegue centralizar o texto, somente com padding não fica centralizado */
     width: 100%;
-    padding: 30px;
+    padding: 60px;
     text-align: center;
     box-sizing: border-box;
 }
 
 .links{
-    font-size: 22px;
+    font-size: 18px;
+    position: absolute;
+    transform: translate(15%,15%);
 }
 
 .links a + a {
@@ -37,16 +39,68 @@ header{
 }
 
 .links a {
-    /* Retirada underline */
+    padding: 16px 34px;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: .9s;
     text-decoration: none;
-    color: #777;
+    color: #333;  /* Letras da caixa */
 }
 
-.links a.active{
-    font-weight: bold;
-    color: var(--primary-color);
+a:before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #293484;  /* #fcffa4 mudar para amarelo cor da caixa 293484*/
+    z-index:-1;
+    transform: scale(0.3);
+    transition: .9s;
+    visibility: hidden;
 }
 
-.links a:hover{
-    text-decoration: underline;
+a:hover{
+    color: #fcffa4;
+
+}
+a:hover:before{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* CARD */
+
+.card{
+    background-color: white;
+    width: 800px;
+    height: 400px;
+
+    /*espaçamento card central na pagina*/
+    margin: 45px auto;
+
+    /* divisão do card*/
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* sombra cartão */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+
+    /* animation animation-duration: 200ms;     animation-timing-function: ease-out;*/
+    animation: up 500ms ease;
+}
+
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    to{
+        opacity: 1;
+    }
 }
