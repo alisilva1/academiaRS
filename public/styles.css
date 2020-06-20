@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
 
 *{
     /* é criado uma borda automática na pagina, para não ter borda precisa ajustar dessa forma */
     margin: 0;
     padding: 0;
     border: none;
+}
+
+.root{
+    --primary-color: #459345;
 }
 
 body {
@@ -35,4 +39,14 @@ header{
 .links a {
     /* Retirada underline */
     text-decoration: none;
+    color: #777;
+}
+
+.links a.active{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.links a:hover{
+    text-decoration: underline;
 }
