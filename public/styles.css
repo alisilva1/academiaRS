@@ -31,12 +31,11 @@ header{
 .links{
     font-size: 18px;
     position: absolute;
-    transform: translate(15%,15%);
+    transform: translate(15%,15%);  
 }
 
 .links a + a {
     margin-left: 32px ;
-
 }
 
 .links a {
@@ -47,7 +46,6 @@ header{
     background: transparent;
     position: relative;
     overflow: hidden;
-    transition: .9s;
     text-decoration: none;
     color: #333;  /* Letras da caixa */
 }
@@ -62,7 +60,7 @@ a:before{
     background: #293484;  /* #fcffa4 mudar para amarelo cor da caixa 293484*/
     z-index:-1;
     transform: scale(0.3);
-    transition: .9s;
+    transition: .1s;
     visibility: hidden;
 }
 
