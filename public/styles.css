@@ -122,7 +122,7 @@ a:hover:before{
 /* pega o primeiro details item */
 
 .details .item div:nth-child(1){
-    color: #aaa;
+    color: rgba(30, 30, 30,0.8);
     font-weight: 12px;
     line-height: 24px;
     letter-spacing: 0,7px;
@@ -151,4 +151,41 @@ a:hover:before{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 12px;
+}
+
+/* FORM */
+
+input{
+    width: 100%;
+    color: #555;
+    font-weight: 700;
+    font-size: 16px;
+    /* retirar linha envolta do input*/
+    outline: none;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 8px;
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input[type="date"]{
+    color: rgba(0, 0, 0, 0.8);    
+}
+
+button[type="submit"]{
+    padding: 8px 24px;
+    background-color: #293484;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 16px;
+    width:100%;
+    font-size: 16px;
+    color: white;
 }
