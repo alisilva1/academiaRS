@@ -6,7 +6,8 @@
     padding: 0;
     border: none;
 }
-
+/* criar variáveis do sistema 
+para usar a variável: var(--primary-color)*/
 .root{
     --primary-color: #459345;
 }
@@ -80,7 +81,7 @@ a:hover:before{
 .card{
     background-color: white;
     width: 800px;
-    height: 400px;
+    min-height: 400px;
 
     /*espaçamento card central na pagina*/
     margin: 45px auto;
@@ -103,4 +104,53 @@ a:hover:before{
     to{
         opacity: 1;
     }
+}
+
+/* Detalhes */
+
+.details{
+    padding: 32px
+}
+
+.details .item{
+    border-bottom: 3px solid rgba(0, 0, 0, 1);
+    padding: 10px 0px;
+}
+
+.details .item:last-child{
+    border:none;
+}
+
+/* pega o primeiro details item */
+
+.details .item div:nth-child(1){
+    color: #aaa;
+    font-weight: 12px;
+    line-height: 24px;
+    letter-spacing: 0,7px;
+    font-weight: 400;
+}
+
+.details .item div:nth-child(2){
+    color: #555;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #293484;
+}
+/* Caminho para encontrar o item ou basta indicar a classe e objeto que deseja alterar .details .item span*/
+.details .item div:nth-child(2) span{
+    padding: 8px 16px;
+    background-color: #fcffa4;
+    border-radius: 16px;
+    margin-top: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
 }

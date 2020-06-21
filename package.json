@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start:dev": "node server.js",
-    "start": "npm-run-all -p nodemon browsersync",
-    "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:5000/ --files 'public,views'"
+    "start": "nodemon server.js"
   },
   "author": "Alisson - alisilva1@gmail.com",
   "license": "MIT",
