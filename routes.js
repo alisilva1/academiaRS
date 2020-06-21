@@ -9,6 +9,11 @@ routes.get('/professor', function(req,res){
     return res.render("professor/index")
 })
 
+routes.get('/professor/create', function(req,res){
+    return res.render("professor/create")
+})
+
+
 routes.get('/student', function(req,res){
     return res.send("/student")
 })
