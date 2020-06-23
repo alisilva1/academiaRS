@@ -7,10 +7,22 @@ exports.post = function(req,res){
         if(req.body[key] == "")
             return res.send("Por favor preencha todos os campos!")
     }
-    req.body.birth = Date.parse(req.body.birth)
-    req.body.criado_em = Date.now()
 
-    data.professor.push(req.body)
+    let{avatar_url,name,birth,gender,services}= req.body
+
+    birth = Date.parse(req.body.birth)
+    const criado_em = Date.now()
+    const id = Number(data.professor.length + 1)
+
+    data.professor.push({
+        id,
+        avatar_url,
+        name,
+        birth,
+        gender,
+        services,
+        criado_em
+    })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 4),function(err){
         if(err) return res.send("O preenchimento dos dados está errado.")

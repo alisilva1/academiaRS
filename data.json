@@ -1,3 +1,13 @@
 {
-    "professor": []
+    "professor": [
+        {
+            "id": 1,
+            "avatar_url": "http://Alisson_Foto",
+            "name": "Alisson Medeiros",
+            "birth": 642038400000,
+            "gender": "M",
+            "services": "Desenvolvimento, Testes",
+            "criado_em": 1592874703964
+        }
+    ]
 }
