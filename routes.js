@@ -10,6 +10,8 @@ routes.get('/professor', function(req,res){
     return res.render("professor/index")
 })
 
+routes.get('/professor/:id', professor.show)
+
 routes.get('/professor/create', function(req,res){
     return res.render("professor/create")
 })

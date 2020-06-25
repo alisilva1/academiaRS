@@ -1,5 +1,22 @@
 const fs = require('fs');
 const data = require("./data.json");
+
+//show
+exports.show = function (req,res) {
+    //req.query passa a condição com ?id= A na barra de endereço
+    //req.body vem através do post
+    //req.params tipo endereço/var1/var2    passa direto no endereço
+    const {id} = req.params
+
+    const foundProfessor = data.professor.find(function(professor){
+        return id == professor
+
+    if(!foundProfessor) return res.send ('Professor não encontrado')
+    return res.send(foundProfessor)
+    })
+}
+
+
 //create
 exports.post = function(req,res){
     const keys = Object.keys(req.body)
