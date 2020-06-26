@@ -1,5 +1,7 @@
 const fs = require('fs');
 const data = require("./data.json");
+const { send } = require('process');
+const {calcula_idade} = require("./funcoes")
 
 //show
 exports.show = function (req,res) {
@@ -9,11 +11,31 @@ exports.show = function (req,res) {
     const {id} = req.params
 
     const foundProfessor = data.professor.find(function(professor){
-        return id == professor
-
-    if(!foundProfessor) return res.send ('Professor não encontrado')
-    return res.send(foundProfessor)
+        return id == professor.id
+        
     })
+    if (!foundProfessor) return res.send ('Professor não encontrado')
+    
+    switch(foundProfessor.gender){
+        case 'M':
+            foundProfessor.gender='Masculino'
+            break;
+        case 'F':
+            foundProfessor.gender='Feminino'
+            break;
+        case 'O':
+            foundProfessor.gender='Outro'
+            break;
+    }
+
+    const professor = {
+        ...foundProfessor,
+        age: calcula_idade(foundProfessor.birth),
+        services: foundProfessor.services.split(","),
+        criado_em: new Intl.DateTimeFormat("pt-BR").format(foundProfessor.criado_em)
+    }
+
+    return res.render("professor/show",{professor: professor})
 }
 
 
