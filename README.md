@@ -2,7 +2,6 @@
 
 Projeto de academia
 
-Projeto de academia.
 Esse é um projeto referente a uma academia de um exercício da RS, porém eu fiz ele voltado para uma academia da minha região e apliquei alguns testes. 
 
 * Fazer o botão animado com o mouse - > OK
